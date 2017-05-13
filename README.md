@@ -1,6 +1,8 @@
 # Building
+```
+npm install
+```
 This code uses only `mocha` package from external libraries
-`npm install`
 
 # Testing
 `npm run test`
@@ -38,4 +40,23 @@ const recursiveDistribution = new RecursiveDistribution([
 console.log('Recursive distribution value:', recursiveDistribution.value);
 
 console.log('Discrete distribution value:', (new DiscreteDistribution([5])).value);
+```
+
+# Task 2
+Function for calculate combinations points and forming result object is in `./libs/combinations.js`
+
+Example:
+```
+const combinations = require('./libs/combinations');
+
+console.log(combinations([
+    [0, 1, 2, 4],
+    [5, 5, 5, 2],
+    [6, 7, 8, 7]
+]));
+
+// will print to console: {
+// "0": [[0, 1, 0], [0, 1, 1], [0, 1, 2], [0, 1, 3], [0, 2, 0] ...
+// "5": [[0, 0, 0], [0, 0, 1], [0, 0, 2], [0, 0, 3], [1, 0, 0] ...
+// }
 ```
